@@ -41,7 +41,7 @@ export default function App() {
       <SafeAreaView style={styles.container}>
 
         {repositories.map(repository => (
-          <View style={styles.repositoryContainer}>
+          <View key={repository.id} style={styles.repositoryContainer}>
             <Text style={styles.repository}>{repository.title}</Text>
 
             {repository.techs.map(tech => (
